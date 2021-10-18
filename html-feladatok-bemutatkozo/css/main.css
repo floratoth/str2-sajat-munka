@@ -1,0 +1,39 @@
+nav {
+    display: inline-block;
+    float: right;
+}
+
+.nav-link {
+    margin-left: 60px;
+}
+
+#highlights {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.content {
+    padding: 10px;
+    border: 1px solid black;
+}
+
+.home-image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 25px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(7, 35vw);
+    grid-gap: 20px;
+}
+
+.gallery-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
