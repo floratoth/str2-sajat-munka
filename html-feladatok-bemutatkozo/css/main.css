@@ -3,6 +3,37 @@ nav {
     float: right;
 }
 
+header {
+    text-transform: uppercase;
+    margin: 10px 20px;
+}
+
+a {
+    color: rgb(214, 63, 63);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.3em;
+}
+
+.top-button {
+    width: 250px;
+    height: 35px;
+}
+
+.footer-btn-a {
+    font-weight: normal;
+    color: black;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+}
+
+.index-main {
+    margin: 50px 20px;
+}
+
 .nav-link {
     margin-left: 60px;
 }
@@ -28,12 +59,80 @@ nav {
 .grid-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(7, 35vw);
-    grid-gap: 20px;
+    grid-gap: 30px;
+    margin: 30px;
 }
 
 .gallery-img {
+    box-shadow: 7px 7px 8px 5px rgb(42, 42, 42);
+}
+
+.gallery-img, .works-img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+.container-div {
+    width: 90vw;
+    height: 60vh;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    border: 1px solid black;
+    border-radius: 3px;
+    margin-top: 30px;
+}
+
+.img-container {
+    width: 25vw;
+    height: 55vh;
+}
+
+.quote-container {
+    max-width: 46vw;
+}
+
+.about-img {
+    width: 40vw;
+    height: 60vh;
+    margin: 30px 0px;
+}
+
+.about-top-section {
+    margin: 30px;
+    font-size: 1.2em;
+}
+
+.form-container {
+    display: grid;
+    margin: 80px auto 0 auto;
+    max-width: 40vw;
+    border: 2px solid black;
+    padding: 20px 15px 40px 15px;
+}
+
+.field {
+    margin: 10px;
+    padding: 5px;
+}
+
+.form-title {
+    margin: 5px auto 30px auto;
+}
+
+.form-button {
+    width: 100px;
+    height: 30px;
+    margin: 30px auto auto auto;
+}
+
+@media (max-width: 550px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+    header {
+        font-size: 9px;
+    }
 }
