@@ -1,21 +1,88 @@
 body {
-    display: flex;
-    justify-content: center;
-    background-color: rgb(250, 178, 178);
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  background-color: rgb(250, 178, 178);
 }
 
 .main__btn {
-    position: relative;
-    top: 40vh;
-    padding: 1.5em;
-    font-size: 1.5em;
-    color: white;
-    background-color: darkcyan;
-    border: 3px solid white;
-    border-radius: 8px;
+  padding: 10px;
+  margin: auto;
+  font-size: 1.5em;
+  color: white;
+  background-color: darkcyan;
+  border: 3px solid white;
+  border-radius: 8px;
+  cursor: pointer;
 }
 
 .main__btn:hover {
-    background-color: rgb(0, 116, 116);
-    cursor: pointer;
+  background-color: rgb(0, 116, 116);
+}
+
+.modal {
+  visibility: hidden;
+  opacity: 0;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.75);
+  transition: visibility 0.5s, opacity 0.5s ease-in-out;
+}
+
+.modal.show {
+  visibility: visible;
+  opacity: 1;
+  /* -webkit-transition: opacity 0.5s ease-in-out;
+  -moz-transition: opacity 0.5s ease-in-out;
+  -ms-transition: opacity 0.5s ease-in-out; */
+  transition: visibility 0s, opacity 0.5s ease-in-out;
+}
+
+.modal__content {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+}
+
+.fa-times {
+  display: block;
+  float: right;
+  font-size: 1.2em;
+  cursor: pointer;
+}
+
+.modal__footer {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.modal__buttons {
+  padding: 10px 15px;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.modal__buttons--ok {
+  background-color: #4caf50;
+}
+
+.modal__buttons--cancel {
+  background-color: #f44336;
+  margin-left: 15px;
+}
+
+@media (min-width: 560px) {
+  .modal__content {
+    width: 50%;
+  }
 }

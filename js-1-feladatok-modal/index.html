@@ -1,13 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./main.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="./main.css" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body class="body">
     <button class="main__btn">Open Modal</button>
-</body>
+      <div class="modal" id="modal">
+        <div class="modal__content">
+          <i class="fa fa-times" aria-hidden="true"></i>
+          <div class="modal__header">
+            <h3>The standard Lorem Ipsum passage, used since the 1500s</h3>
+          </div>
+          <div class="modal__body">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+              reprehenderit in voluptate velit esse cillum dolore eu fugiat
+              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+              sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+          </div>
+          <div class="modal__footer">
+            <button class="modal__buttons modal__buttons--ok">Okey</button>
+            <button class="modal__buttons modal__buttons--cancel">
+              Cancel
+            </button>
+          </div>
+        </div>
+    </div>
+
+    <script>
+      let body = document.getElementsByClassName("body")[0];
+      let showModalBtn = document.getElementsByClassName("main__btn")[0];
+      let okBtn = document.getElementsByClassName("modal__buttons--ok")[0];
+      let cancelBtn = document.getElementsByClassName(
+        "modal__buttons--cancel"
+      )[0];
+      let closeIcon = document.getElementsByClassName("fa-times")[0];
+      let modal = document.getElementById("modal");
+      let modalContent = document.getElementsByClassName("modal__content")[0];
+
+      showModalBtn.addEventListener("click", function(event) {
+        modal.classList.add("show");
+        event.stopPropagation();
+        console.log("button clicked!");
+      });
+
+      closeIcon.addEventListener("click", function () {
+        modal.classList.remove("show");
+      });
+
+      okBtn.addEventListener("click", function () {
+        modal.classList.remove("show");
+      });
+
+      cancelBtn.addEventListener("click", function () {
+        modal.classList.remove("show");
+      });
+
+
+      body.addEventListener("click", function (event) {
+        if (!modalContent.contains(event.target)) {
+          modal.classList.remove("show");
+        }
+      });
+    </script>
+  </body>
 </html>
