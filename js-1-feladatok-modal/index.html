@@ -10,30 +10,28 @@
   </head>
   <body class="body">
     <button class="main__btn">Open Modal</button>
-      <div class="modal" id="modal">
-        <div class="modal__content">
-          <i class="fa fa-times" aria-hidden="true"></i>
-          <div class="modal__header">
-            <h3>The standard Lorem Ipsum passage, used since the 1500s</h3>
-          </div>
-          <div class="modal__body">
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-              sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </p>
-          </div>
-          <div class="modal__footer">
-            <button class="modal__buttons modal__buttons--ok">Okey</button>
-            <button class="modal__buttons modal__buttons--cancel">
-              Cancel
-            </button>
-          </div>
+    <div class="modal" id="modal">
+      <div class="modal__content">
+        <i class="fa fa-times" aria-hidden="true"></i>
+        <div class="modal__header">
+          <h3>The standard Lorem Ipsum passage, used since the 1500s</h3>
         </div>
+        <div class="modal__body">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+            culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+        </div>
+        <div class="modal__footer">
+          <button class="modal__buttons modal__buttons--ok">Okey</button>
+          <button class="modal__buttons modal__buttons--cancel">Cancel</button>
+        </div>
+      </div>
     </div>
 
     <script>
@@ -47,7 +45,7 @@
       let modal = document.getElementById("modal");
       let modalContent = document.getElementsByClassName("modal__content")[0];
 
-      showModalBtn.addEventListener("click", function(event) {
+      showModalBtn.addEventListener("click", function (event) {
         modal.classList.add("show");
         event.stopPropagation();
         console.log("button clicked!");
@@ -64,7 +62,6 @@
       cancelBtn.addEventListener("click", function () {
         modal.classList.remove("show");
       });
-
 
       body.addEventListener("click", function (event) {
         if (!modalContent.contains(event.target)) {

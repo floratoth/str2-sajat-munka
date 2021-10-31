@@ -11,9 +11,9 @@ body {
   padding: 10px;
   margin: auto;
   font-size: 1.5em;
-  color: white;
-  background-color: darkcyan;
-  border: 3px solid white;
+  color: rgb(255, 255, 255);
+  background-color: rgb(0, 139, 139);
+  border: 3px solid rgb(255, 255, 255);
   border-radius: 8px;
   cursor: pointer;
 }
@@ -29,15 +29,18 @@ body {
   height: 100vh;
   position: fixed;
   background: rgba(0, 0, 0, 0.75);
+  -webkit-transition: visibility 0.5s, opacity 0.5s ease-in-out;
+  -moz-transition: visibility 0.5s, opacity 0.5s ease-in-out;
+  -ms-transition: visibility 0.5s, opacity 0.5s ease-in-out;
   transition: visibility 0.5s, opacity 0.5s ease-in-out;
 }
 
 .modal.show {
   visibility: visible;
   opacity: 1;
-  /* -webkit-transition: opacity 0.5s ease-in-out;
-  -moz-transition: opacity 0.5s ease-in-out;
-  -ms-transition: opacity 0.5s ease-in-out; */
+  -webkit-transition: visibility 0s, opacity 0.5s ease-in-out;
+  -moz-transition: visibility 0s, opacity 0.5s ease-in-out;
+  -ms-transition: visibility 0s, opacity 0.5s ease-in-out;
   transition: visibility 0s, opacity 0.5s ease-in-out;
 }
 
@@ -47,10 +50,10 @@ body {
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
-  background-color: #fefefe;
+  background-color: rgb(254, 254, 254);
   margin: auto;
   padding: 20px;
-  border: 1px solid #888;
+  border: 1px solid rgb(136, 136, 136);
 }
 
 .fa-times {
@@ -67,17 +70,17 @@ body {
 
 .modal__buttons {
   padding: 10px 15px;
-  color: white;
+  color: rgb(255, 255, 255);
   border: none;
   cursor: pointer;
 }
 
 .modal__buttons--ok {
-  background-color: #4caf50;
+  background-color: rgb(76, 175, 80);
 }
 
 .modal__buttons--cancel {
-  background-color: #f44336;
+  background-color: rgb(244, 67, 54);
   margin-left: 15px;
 }
 
