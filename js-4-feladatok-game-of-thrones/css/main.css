@@ -99,7 +99,7 @@ body {
 }
 
 .fa-search {
-  color:rgb(66, 66, 66);
+  color: rgb(66, 66, 66);
 }
 
 img {
@@ -116,6 +116,11 @@ img {
 
 .one_char_container > p {
   margin: 0;
+}
+
+.one_char_container > p:hover {
+  font-weight: bold;
+  cursor: pointer;
 }
 
 .info-img-wrapper {
