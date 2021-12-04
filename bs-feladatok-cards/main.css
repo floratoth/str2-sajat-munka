@@ -1,0 +1,25 @@
+html {
+  font-size: 16px;
+}
+
+.container-sm {
+  margin: auto;
+}
+
+@media (min-width: 768px) {
+  .container-sm {
+    width: 88vw;
+  }
+}
+
+@media (max-width: 540) {
+  .container-sm {
+    width: 50vw;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container-sm {
+    width: 70;
+  }
+}
