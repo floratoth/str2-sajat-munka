@@ -12,7 +12,7 @@ label {
 }
 
 .icon {
-  background-color: rgb(69, 34, 126);
+  background-color: rgb(100, 100, 100);
   color: white;
   height: 3rem;
   width: 3rem;
@@ -29,4 +29,26 @@ label {
 
 .copyright {
   font-size: 12px;
+}
+
+.form-container {
+  width: 25%;
+}
+
+@media (max-width: 920px) {
+  .form-container {
+    width: 40%;
+  }
+}
+
+@media (max-width: 650px) {
+  .form-container {
+    width: 65%;
+  }
+}
+
+@media (max-width: 520px) {
+  .form-container {
+    width: 80%;
+  }
 }
